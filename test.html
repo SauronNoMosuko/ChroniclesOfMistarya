@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes fadein {
+      0% {
+        transform: translateX(-110px);
+      }100% {
+        transform: translateX(0px);
+      }
+    }
+    @keyframes fadeout {
+      0% {
+        transform: translateX(0px);
+      }100% {
+        transform: translateX(-110px);
+      }
+    }
+    nav {
+      background: #222;
+      width: 100px;
+      color: #fff;
+      transform: translateX(-110px);
+    }
+    .close {
+      animation: fadeout 300ms linear;
+      animation-fill-mode: forwards;
+    }
+    .open {
+      animation: fadein 300ms linear;
+      animation-fill-mode: forwards;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" id="burger-menu" onclick="handleMenu()">
+    ...
+  </button>
+  <nav>
+    <ul>
+      <li>Home</li>
+    </ul>
+  </nav>
+  <script>
+    const button = document.querySelector('#burger-menu')
+    button.addEventListener('click', () => {
+      const nav = document.getElementsByTagName('nav')[0]
+
+      if(nav.classList.contains('open')) {
+        nav.classList.remove('open')
+        nav.classList.add('close')
+      }else{
+        nav.classList.add('open')
+        nav.classList.remove('close')
+      }
+    })
+  </script>
+</body>
+</html>

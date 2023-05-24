@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans';
+    background-image: url(https://cdn.discordapp.com/attachments/954187726394109973/1099852754282885310/19_Sem_Titulo_20230423212110.png);
+    background-position-y: -8rem;
+    background-repeat: no-repeat;
+
+}
+
+.container {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+}
+
+.drawer {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.paper {
+    height: 100vh;
+}
+
+.front {
+    position: absolute;
+    height: 16vh;
+}
+
+.abs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 7rem;
+    place-items: center;
+}
+
+.abs img {
+    position: relative;
+}
+
+.lock {
+    display: flex;
+    flex-direction: row;
+}
+
+.lock svg {
+    position: absolute;
+}
+
+.abs img:hover {
+    cursor: pointer;
+}
+
+.closeDrawer {
+    height: 10vh;
+    width: 3rem;
+}
+
+.openArrow svg {
+    width: 7rem;
+}
+
+.closeArrow svg {
+    width: 7rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+
+}
+
+.libro {
+
+    height: 100vh;
+}
+
+.close {
+    animation: fadeout 300ms linear;
+    animation-fill-mode: forwards;
+}
+
+.open {
+    animation: fadein 300ms linear;
+    animation-fill-mode: forwards;
+}
+
+button {
+    background: none;
+    border: none;
+    position: absolute;
+}
+
+.nextAndLastPage {
+    width: 15rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 3rem;
+}
+
+.nextAndLastPage svg:hover {
+    cursor: pointer;
+}
+
+.burguerMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 3rem;
+    transition: all 200ms;
+}
+
+.burguerMenu:hover {
+    cursor: pointer;
+    filter: opacity(0.6);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+}
+
+.boxMenu {
+    width: 20vw;
+    height: 20vh;
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 8rem 10rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 3rem;
+    opacity: 0.9;
+}
+
+.boxMenu span {
+    font-family: 'Cinzel';
+    color: rgb(243, 226, 226);
+    font-size: 3rem;
+    transition: all 200ms;
+    opacity: 0.9;
+}
+
+.butClose {
+    font-family: 'Open Sans';
+    font-size: 2.5rem;
+    color: black;
+
+}
+
+.butClose:hover {
+    cursor: pointer;
+
+}
+
+.boxMenu span:hover {
+    cursor: pointer;
+    filter: opacity(0.6);
+}
+
+.boxMenu a {
+    text-decoration: none;
+}
+
+.boxRedeemCode {
+    width: 20vw;
+    height: 8vh;
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 8rem 50rem;
+    border-radius: 1.5rem;
+    opacity: 0.9;
+    display: grid;
+    place-content: center;
+}
+
+.boxRedeemCode input {
+    background-color: rgb(92, 91, 91);
+    width: 19vw;
+    height: 5vh;
+    font-size: 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.Cape:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes fadein {
+    0% {
+      transform: translateX(-25rem);
+    }100% {
+      transform: translateX(0px);
+    }
+}
+@keyframes fadeout {
+    0% {
+      transform: translateX(0px);
+    }100% {
+      transform: translateX(-25rem);
+    }
+}
